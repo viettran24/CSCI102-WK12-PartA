@@ -20,4 +20,12 @@ def UpdateString(string1,string2,index):
         letterList.append(char)
     letterList[index] = string2
     return letterList
-PrintOutput(UpdateString("Hello World","a",6))
+
+def FindWordCount(filename,string):
+    my_list = LoadFile(filename)
+    my_string = ''
+    for x in my_list:
+        my_string += x
+    my_string = my_string.count(string)
+    return my_string
+PrintOutput(FindWordCount("README.md","Viet"))
