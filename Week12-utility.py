@@ -5,4 +5,11 @@
 def PrintOutput(string):
     print("OUTPUT:", string)
 
-PrintOutput("What it Do")
+def LoadFile(filename):
+    with open(filename) as file:
+        elementList = []
+        for line in file:
+            elementList.append(line)
+    return elementList
+    
+
