@@ -12,4 +12,11 @@ def LoadFile(filename):
             elementList.append(line)
     return elementList
     
+def UpdateString(string1,string2,index):
+    letterList = []
+    for char in string1:
+        letterList.append(char)
+        letterList[index] = string2
+    return letterList
 
+PrintOutput(UpdateString("Hello World","a",0))
