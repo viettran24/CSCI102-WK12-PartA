@@ -28,4 +28,17 @@ def FindWordCount(filename,string):
         my_string += x
     my_string = my_string.count(string)
     return my_string
-PrintOutput(FindWordCount("README.md","Viet"))
+
+def ScoreFinder(players,scores,name):
+    i = 0
+    for x in players:
+        if x != name:
+            i = i + 1
+        else:
+            return players[i], "has a score of", scores[i]
+    if a not in players:
+        return "player not found"
+
+
+
+
