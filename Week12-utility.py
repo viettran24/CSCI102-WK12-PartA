@@ -29,10 +29,6 @@ def FindWordCount(filename,string):
     my_string = my_string.count(string)
     return my_string
 
-players = ["Mary", "Cody", "Joe", "Jill", "Xai", "Bodo"]
-scores = [5, 8, 10, 6, 10, 4]
-players2 = ["Melvin", "Martian", "Baka", "Xai", "Cody"]
-
 def ScoreFinder(players,scores,name):
     i = 0
     clean_list = []
@@ -54,8 +50,8 @@ def Union(list1,list2):
         new_list.append(x)
     return new_list
 
-def Intersection(firstlist,secondlist):
-    combined_list = Union(firstlist,secondlist)
+def Intersection(list1,list2):
+    combined_list = Union(list1,list2)
     clean_list = []
     no_dupes = []
     for x in combined_list:
@@ -66,6 +62,13 @@ def Intersection(firstlist,secondlist):
             no_dupes.append(x)
     return no_dupes
 
-PrintOutput(Intersection(players,players2))
+def NotIn(list1,list2):
+    new_list = []
+    for x in list1:
+        if x not in list2:
+            new_list.append(x)
+    return new_list
+
+            
 
 
